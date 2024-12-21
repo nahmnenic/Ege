@@ -7,14 +7,3 @@ from ipaddress import *
 #     if bip.count('0') % 3 != 0:
 #         c+=1
 # print(c)
-
-# def a(d):
-#     first = ((365 - (75/(d**3)))/(3 * d**2 - d))*5
-#     return first
-# def b(d):
-#     second = ((412 - (125/(d**3)))/(2 * d**2 - d))*4
-#     return second
-# def q(a, b, x):
-#     return (a*x-((a*x)%2)) + (b*x-((b*x)%2))
-
-# # print(q(a(3),b(5), 1))
