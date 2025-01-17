@@ -1,0 +1,1 @@
+f = open('26.txt').read()

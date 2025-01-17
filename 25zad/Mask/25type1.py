@@ -18,20 +18,28 @@ from re import *
 #        if n % 60 == 0:
 #           print(i, i//4546)
 
-def f(a):
-    k = 0
-    for i in range(2, a // 2+1):
-        if (a % i == 0):
-            k = k+1
-    if ((k <= 0) or a == 2) and a != 1 and a != -1:
-        return True
-    else:
-        return False
+# def f(a):
+#     k = 0
+#     for i in range(2, a // 2+1):
+#         if (a % i == 0):
+#             k = k+1
+#     if ((k <= 0) or a == 2) and a != 1 and a != -1:
+#         return True
+#     else:
+#         return False
     
-p = 1
-for i in range(-1, 10**5 + 1, 2):
-    if f(i):
-        p += 1
-        if f(i) and f(p):
-            if fullmatch(r'1[\d]*7[\d]7', str(i)) != None:
-                print(i, p)
+# p = 1
+# for i in range(-1, 10**5 + 1, 2):
+#     if f(i):
+#         p += 1
+#         if f(i) and f(p):
+#             if fullmatch(r'1[\d]*7[\d]7', str(i)) != None:
+#                 print(i, p)
+
+# 18867
+# ? = [\d]   * = [\d]*
+# [\d] = [0123456789]
+for x in range(0,10**10, 2025):
+    if fullmatch(r'33[\d]2[\d]*42[\d]', str(x)) != None:
+        if fullmatch(r'[\d]*32[\d][\d]2[\d]', str(x)) != None:
+            print(x,x//2025)
