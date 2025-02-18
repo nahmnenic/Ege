@@ -112,3 +112,51 @@
 #         z.append(k)
 #     else: k = 0
 # print(max(z)//2)
+
+# 2503
+# f = open('/Users/mihail/Downloads/files (1)/24_2503.txt').read()
+# f = f.split()
+# c = 0
+# for i in f:
+#     co = ca = 0
+#     for r in range(len(i)):
+#         if i[r-1:r+2] == 'AOA':
+#             ca += 1
+#         if i[r-1:r+2] == 'OAO':
+#             co += 1
+#     if ca > co:
+#         c +=1
+# print(c)
+
+# 18284
+# f = open('/Users/mihail/Downloads/24_18284.txt').readline().strip().replace('L', ' L').split()
+# mn = 3000000
+# for i in f:
+#     o = []
+#     v = []
+#     e = []
+#     if i[0] == 'L':
+#         for r in range(len(i)):
+#             if i[r] == 'O': o.append(r)
+#             if i[r] == 'V': v.append(r)
+#             if i[r] == 'E': e.append(r)
+            
+#             if o != [] and v != [] and e != []:
+#                 mnv = [s for s in v if s > min(o)]
+#                 mne = [q for q in e if q > min(mnv)]
+#                 if mne != []:
+#                     mn = min(mn, min(mne)+1)
+#                     print(mn)
+#  19887
+# f = open('/Users/mihail/Downloads/19887.txt').readline().replace('0', 'a').replace('2', 'a').replace('4', 'a').replace('6', 'a').replace('8', 'a')
+# f = f.replace('1','b').replace('3','b').replace('5','b').replace('7','b').replace('9','b')
+# c = 0
+# mx = 0
+# for r in range(len(f)-1):
+#     cur = f[r]
+#     nx = f[r+1]
+#     if cur != nx:
+#         c+=1
+#     else: c = 0
+#     mx = max(mx, c+1)
+# print(mx)

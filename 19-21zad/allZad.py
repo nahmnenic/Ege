@@ -31,3 +31,15 @@ from math import *
 #print([s for s in range(20, 100) if f(s, 2)])
 # print([s for s in range(20, 100) if f(s, 3) and not(f(s,1)) and not(f(s,2))])
 # print([s for s in range(20, 140) if not(f(s,2)) and f(s,4)])
+
+# 13084
+# def f(s1, m):
+#     if s1 >= 84: return (m%2) == 0
+#     if m ==0: return False
+#     h = [f(s1+1, m -1)]
+#     if s1 % 2 == 0: h.append(f(s1*1.5, m -1))
+#     else: h.append(f(s1*2, m -1))
+#     return any(h) if (m-1)% 2== 0 else all(h)
+# print(max([s for s in range(1, 84) if not(f(s, 1)) and f(s, 2)]))
+# print([s for s in range(1, 84) if not(f(s, 1)) and f(s, 3)][:2])
+# print(max([s for s in range(1, 84) if not(f(s, 2)) and f(s, 4)]))
