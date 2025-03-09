@@ -37,6 +37,7 @@ from ipaddress import *
 # print('1'*14 + '00')
 # print(b)
 
-b = bin(185)[2:].zfill(8) + bin(237)[2:].zfill(8)
-print(bin(157)[2:].zfill(8), bin(220)[2:].zfill(8), bin(185)[2:].zfill(8), bin(237)[2:].zfill(8))
-print(bin(157)[2:].zfill(8), bin(220)[2:].zfill(8), bin(184)[2:].zfill(8), bin(230)[2:].zfill(8))
+# net = ip_network('123.215.104.78/255.255.252.0',0)
+# print(net[-2])
+p = 1000_000* (1.02)**5
+print(p)

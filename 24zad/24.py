@@ -160,3 +160,47 @@
 #     else: c = 0
 #     mx = max(mx, c+1)
 # print(mx)
+
+# 20813
+# f = open('/Users/mihail/Downloads/24_20813.txt').readline().rstrip().replace('*', '-').replace('--', '- -')
+# for q in ('7', '8', '9'): f = f.replace(q, '1')
+# f = f.split()
+# m = 0
+# for i in f:
+#     i = i.replace('-01', '-0 ').replace('-00', '-0 0')
+#     i = i.split()
+#     for d in i:
+#         if len(d) > m:
+#             d = d.strip('-')
+#             m = max(m, len(d))
+# print(m)
+
+# 19970
+# f = open('/Users/mihail/Downloads/24_19970.txt').readline().rstrip()
+# f = f.replace('*','+').replace('++','+ +')
+# for x in range(1, 10):
+#     if x != 5: f = f.replace(f'{x}', '1')
+# f = f.split()
+# m = 0
+# for i in f:
+#     i = i.strip('+')
+#     i = i.split('1+')
+#     for d in i:
+#         if len(d)> 5:
+#             if d[-1] != '1':
+#                 m = max(m, len(d))
+# print(m)
+
+# 17616
+f = open('/Users/mihail/Downloads/24_17616.txt').readline().rstrip()
+f = f.replace('++', '+ +').replace('+*', '+ *').replace('*+', '* +').replace('**', '* *')
+for i in range(1, 10):
+    f = f.replace(f'{i}', '1')
+f = f.split()
+m = 0
+for i in f:
+    i = i.strip('+').strip('*')
+    if len(i) > m:
+        if eval(str(i)) == 0:
+            m = max(m, len(i))
+print(m)
